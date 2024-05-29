@@ -12,10 +12,10 @@ app.use(cors());
 app.use(express.json());
 
 mongoose
-  .connect(process.env.MONGO_URL, ,{
+  .connect(process.env.MONGO_URL,{
       //  useNewUrlParser: true,
       // useUnifiedTopology: true,
-      serverSelectionTimeoutMS: 50000,
+      serverSelectionTimeoutMS: 50000
     })
   .then(() => {
     console.log("DB Connetion Successfull");
